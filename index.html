@@ -297,7 +297,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 <script>
 async function initialize(idToken){
-  const backendUrl="https://nuke-people-analysis.onrender.com";
+  const backendUrl="https://4k5jzc3vt3.execute-api.us-east-1.amazonaws.com";
   const embedUrl="https://app.powerbi.com/reportEmbed?reportId=22f2bd0a-10cb-48d5-a8a4-b311c2924286&groupId=3281c17a-8737-4ec6-9aac-952e4e88e9e7&w=2&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLUNBTkFEQS1DRU5UUkFMLXJlZGlyZWN0LmFuYWx5c2lzLndpbmRvd3MubmV0IiwiZW1iZWRGZWF0dXJlcyI6eyJ1c2FnZU1ldHJpY3NWTmV4dCI6dHJ1ZX19";
   let embedToken=null;
   async function fetchAuthToken(){const r=await fetch(`${backendUrl}/auth-token`,{method:'POST',headers:{'Content-Type':'application/json'}});const d=await r.json();return d.access_token;}
